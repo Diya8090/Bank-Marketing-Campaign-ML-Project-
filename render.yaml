@@ -1,0 +1,24 @@
+# Render Deployment Blueprint Configuration for DepositIQ AI
+services:
+  # 1. FastAPI Python Backend Web Service
+  - type: web
+    name: depositiq-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn app:app --host 0.0.0.0 --port $PORT --app-dir backend
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.11
+
+  # 2. React Vite Frontend Static Site
+  - type: web
+    name: depositiq-frontend
+    env: static
+    buildCommand: cd frontend/bank-marketing && npm install && npm run build
+    staticPublishPath: frontend/bank-marketing/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: depositiq-backend
+          property: url

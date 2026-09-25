@@ -1,0 +1,11 @@
+{
+  "name": "deposit-iq-ai",
+  "version": "1.0.0",
+  "description": "DepositIQ AI - Term Deposit Subscription & Predictive Lead Intelligence Engine",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend/bank-marketing",
+    "start": "npm run dev --prefix frontend/bank-marketing",
+    "build": "npm run build --prefix frontend/bank-marketing"
+  }
+}

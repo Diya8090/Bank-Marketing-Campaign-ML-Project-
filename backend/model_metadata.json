@@ -1,0 +1,653 @@
+{
+  "model_name": "DepositPulse AI 16-Feature Scikit-Learn Pipeline",
+  "algorithm": "Logistic Regression (Class-Weighted)",
+  "preprocessing": "ColumnTransformer (StandardScaler on 7 Numeric + OneHotEncoder on 9 Categorical)",
+  "solver": "lbfgs",
+  "penalty": "l2",
+  "C": 1.0,
+  "class_weight": {
+    "0": 1.0,
+    "1": 3.2
+  },
+  "random_state": 42,
+  "train_test_ratio": "80/20 Stratified Split",
+  "accuracy": 89.2,
+  "accuracy_raw": 0.8919606325334513,
+  "precision": 53.17,
+  "precision_raw": 0.5317149569303053,
+  "recall": 64.18,
+  "recall_raw": 0.6417769376181475,
+  "f1_score": 58.16,
+  "f1_raw": 0.5815845824411134,
+  "roc_auc": 90.75,
+  "roc_auc_raw": 0.9075041458879066,
+  "confusion_matrix": [
+    [
+      7387,
+      598
+    ],
+    [
+      379,
+      679
+    ]
+  ],
+  "class_names": [
+    "NOT SUBSCRIBED (0)",
+    "SUBSCRIBED (1)"
+  ],
+  "target_imbalance": {
+    "negative_class_0": 39922,
+    "positive_class_1": 5289,
+    "negative_percent": 88.3,
+    "positive_percent": 11.7
+  },
+  "numerical_features": [
+    "age",
+    "balance",
+    "day",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous"
+  ],
+  "categorical_features": [
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "month",
+    "poutcome"
+  ],
+  "all_features": [
+    "age",
+    "balance",
+    "day",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "month",
+    "poutcome"
+  ],
+  "encoded_feature_names": [
+    "num__age",
+    "num__balance",
+    "num__day",
+    "num__duration",
+    "num__campaign",
+    "num__pdays",
+    "num__previous",
+    "cat__job_admin.",
+    "cat__job_blue-collar",
+    "cat__job_entrepreneur",
+    "cat__job_housemaid",
+    "cat__job_management",
+    "cat__job_retired",
+    "cat__job_self-employed",
+    "cat__job_services",
+    "cat__job_student",
+    "cat__job_technician",
+    "cat__job_unemployed",
+    "cat__job_unknown",
+    "cat__marital_divorced",
+    "cat__marital_married",
+    "cat__marital_single",
+    "cat__education_primary",
+    "cat__education_secondary",
+    "cat__education_tertiary",
+    "cat__education_unknown",
+    "cat__default_no",
+    "cat__default_yes",
+    "cat__housing_no",
+    "cat__housing_yes",
+    "cat__loan_no",
+    "cat__loan_yes",
+    "cat__contact_cellular",
+    "cat__contact_telephone",
+    "cat__contact_unknown",
+    "cat__month_apr",
+    "cat__month_aug",
+    "cat__month_dec",
+    "cat__month_feb",
+    "cat__month_jan",
+    "cat__month_jul",
+    "cat__month_jun",
+    "cat__month_mar",
+    "cat__month_may",
+    "cat__month_nov",
+    "cat__month_oct",
+    "cat__month_sep",
+    "cat__poutcome_failure",
+    "cat__poutcome_other",
+    "cat__poutcome_success",
+    "cat__poutcome_unknown"
+  ],
+  "coefficients": [
+    -0.014566,
+    0.056446,
+    0.068672,
+    1.334062,
+    -0.276797,
+    0.016424,
+    0.059745,
+    0.145979,
+    -0.198571,
+    -0.191665,
+    -0.381302,
+    -0.019382,
+    0.494533,
+    -0.258562,
+    -0.127726,
+    0.559999,
+    -0.039516,
+    -0.096538,
+    -0.133011,
+    -0.047808,
+    -0.257165,
+    0.05921,
+    -0.290779,
+    -0.071876,
+    0.137492,
+    -0.020599,
+    -0.082594,
+    -0.163168,
+    0.243742,
+    -0.489504,
+    0.130174,
+    -0.375937,
+    0.471558,
+    0.43036,
+    -1.14768,
+    -0.007453,
+    -0.840336,
+    0.704913,
+    -0.122097,
+    -1.332048,
+    -0.981398,
+    0.340708,
+    1.608304,
+    -0.600764,
+    -0.953934,
+    1.030846,
+    0.907497,
+    -0.722283,
+    -0.456253,
+    1.707111,
+    -0.774337
+  ],
+  "intercept": -0.253857,
+  "feature_analysis": [
+    {
+      "feature": "poutcome_success",
+      "raw_feature_name": "cat__poutcome_success",
+      "coefficient": 1.707111,
+      "odds_ratio": 5.513,
+      "direction": "positive"
+    },
+    {
+      "feature": "month_mar",
+      "raw_feature_name": "cat__month_mar",
+      "coefficient": 1.608304,
+      "odds_ratio": 4.9943,
+      "direction": "positive"
+    },
+    {
+      "feature": "duration",
+      "raw_feature_name": "num__duration",
+      "coefficient": 1.334062,
+      "odds_ratio": 3.7964,
+      "direction": "positive"
+    },
+    {
+      "feature": "month_jan",
+      "raw_feature_name": "cat__month_jan",
+      "coefficient": -1.332048,
+      "odds_ratio": 0.2639,
+      "direction": "negative"
+    },
+    {
+      "feature": "contact_unknown",
+      "raw_feature_name": "cat__contact_unknown",
+      "coefficient": -1.14768,
+      "odds_ratio": 0.3174,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_oct",
+      "raw_feature_name": "cat__month_oct",
+      "coefficient": 1.030846,
+      "odds_ratio": 2.8034,
+      "direction": "positive"
+    },
+    {
+      "feature": "month_jul",
+      "raw_feature_name": "cat__month_jul",
+      "coefficient": -0.981398,
+      "odds_ratio": 0.3748,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_nov",
+      "raw_feature_name": "cat__month_nov",
+      "coefficient": -0.953934,
+      "odds_ratio": 0.3852,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_sep",
+      "raw_feature_name": "cat__month_sep",
+      "coefficient": 0.907497,
+      "odds_ratio": 2.4781,
+      "direction": "positive"
+    },
+    {
+      "feature": "month_aug",
+      "raw_feature_name": "cat__month_aug",
+      "coefficient": -0.840336,
+      "odds_ratio": 0.4316,
+      "direction": "negative"
+    },
+    {
+      "feature": "poutcome_unknown",
+      "raw_feature_name": "cat__poutcome_unknown",
+      "coefficient": -0.774337,
+      "odds_ratio": 0.461,
+      "direction": "negative"
+    },
+    {
+      "feature": "poutcome_failure",
+      "raw_feature_name": "cat__poutcome_failure",
+      "coefficient": -0.722283,
+      "odds_ratio": 0.4856,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_dec",
+      "raw_feature_name": "cat__month_dec",
+      "coefficient": 0.704913,
+      "odds_ratio": 2.0237,
+      "direction": "positive"
+    },
+    {
+      "feature": "month_may",
+      "raw_feature_name": "cat__month_may",
+      "coefficient": -0.600764,
+      "odds_ratio": 0.5484,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_student",
+      "raw_feature_name": "cat__job_student",
+      "coefficient": 0.559999,
+      "odds_ratio": 1.7507,
+      "direction": "positive"
+    },
+    {
+      "feature": "job_retired",
+      "raw_feature_name": "cat__job_retired",
+      "coefficient": 0.494533,
+      "odds_ratio": 1.6397,
+      "direction": "positive"
+    },
+    {
+      "feature": "housing_yes",
+      "raw_feature_name": "cat__housing_yes",
+      "coefficient": -0.489504,
+      "odds_ratio": 0.6129,
+      "direction": "negative"
+    },
+    {
+      "feature": "contact_cellular",
+      "raw_feature_name": "cat__contact_cellular",
+      "coefficient": 0.471558,
+      "odds_ratio": 1.6025,
+      "direction": "positive"
+    },
+    {
+      "feature": "poutcome_other",
+      "raw_feature_name": "cat__poutcome_other",
+      "coefficient": -0.456253,
+      "odds_ratio": 0.6337,
+      "direction": "negative"
+    },
+    {
+      "feature": "contact_telephone",
+      "raw_feature_name": "cat__contact_telephone",
+      "coefficient": 0.43036,
+      "odds_ratio": 1.5378,
+      "direction": "positive"
+    },
+    {
+      "feature": "job_housemaid",
+      "raw_feature_name": "cat__job_housemaid",
+      "coefficient": -0.381302,
+      "odds_ratio": 0.683,
+      "direction": "negative"
+    },
+    {
+      "feature": "loan_yes",
+      "raw_feature_name": "cat__loan_yes",
+      "coefficient": -0.375937,
+      "odds_ratio": 0.6866,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_jun",
+      "raw_feature_name": "cat__month_jun",
+      "coefficient": 0.340708,
+      "odds_ratio": 1.4059,
+      "direction": "positive"
+    },
+    {
+      "feature": "education_primary",
+      "raw_feature_name": "cat__education_primary",
+      "coefficient": -0.290779,
+      "odds_ratio": 0.7477,
+      "direction": "negative"
+    },
+    {
+      "feature": "campaign",
+      "raw_feature_name": "num__campaign",
+      "coefficient": -0.276797,
+      "odds_ratio": 0.7582,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_self-employed",
+      "raw_feature_name": "cat__job_self-employed",
+      "coefficient": -0.258562,
+      "odds_ratio": 0.7722,
+      "direction": "negative"
+    },
+    {
+      "feature": "marital_married",
+      "raw_feature_name": "cat__marital_married",
+      "coefficient": -0.257165,
+      "odds_ratio": 0.7732,
+      "direction": "negative"
+    },
+    {
+      "feature": "housing_no",
+      "raw_feature_name": "cat__housing_no",
+      "coefficient": 0.243742,
+      "odds_ratio": 1.276,
+      "direction": "positive"
+    },
+    {
+      "feature": "job_blue-collar",
+      "raw_feature_name": "cat__job_blue-collar",
+      "coefficient": -0.198571,
+      "odds_ratio": 0.8199,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_entrepreneur",
+      "raw_feature_name": "cat__job_entrepreneur",
+      "coefficient": -0.191665,
+      "odds_ratio": 0.8256,
+      "direction": "negative"
+    },
+    {
+      "feature": "default_yes",
+      "raw_feature_name": "cat__default_yes",
+      "coefficient": -0.163168,
+      "odds_ratio": 0.8494,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_admin.",
+      "raw_feature_name": "cat__job_admin.",
+      "coefficient": 0.145979,
+      "odds_ratio": 1.1572,
+      "direction": "positive"
+    },
+    {
+      "feature": "education_tertiary",
+      "raw_feature_name": "cat__education_tertiary",
+      "coefficient": 0.137492,
+      "odds_ratio": 1.1474,
+      "direction": "positive"
+    },
+    {
+      "feature": "job_unknown",
+      "raw_feature_name": "cat__job_unknown",
+      "coefficient": -0.133011,
+      "odds_ratio": 0.8755,
+      "direction": "negative"
+    },
+    {
+      "feature": "loan_no",
+      "raw_feature_name": "cat__loan_no",
+      "coefficient": 0.130174,
+      "odds_ratio": 1.139,
+      "direction": "positive"
+    },
+    {
+      "feature": "job_services",
+      "raw_feature_name": "cat__job_services",
+      "coefficient": -0.127726,
+      "odds_ratio": 0.8801,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_feb",
+      "raw_feature_name": "cat__month_feb",
+      "coefficient": -0.122097,
+      "odds_ratio": 0.8851,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_unemployed",
+      "raw_feature_name": "cat__job_unemployed",
+      "coefficient": -0.096538,
+      "odds_ratio": 0.908,
+      "direction": "negative"
+    },
+    {
+      "feature": "default_no",
+      "raw_feature_name": "cat__default_no",
+      "coefficient": -0.082594,
+      "odds_ratio": 0.9207,
+      "direction": "negative"
+    },
+    {
+      "feature": "education_secondary",
+      "raw_feature_name": "cat__education_secondary",
+      "coefficient": -0.071876,
+      "odds_ratio": 0.9306,
+      "direction": "negative"
+    },
+    {
+      "feature": "day",
+      "raw_feature_name": "num__day",
+      "coefficient": 0.068672,
+      "odds_ratio": 1.0711,
+      "direction": "positive"
+    },
+    {
+      "feature": "previous",
+      "raw_feature_name": "num__previous",
+      "coefficient": 0.059745,
+      "odds_ratio": 1.0616,
+      "direction": "positive"
+    },
+    {
+      "feature": "marital_single",
+      "raw_feature_name": "cat__marital_single",
+      "coefficient": 0.05921,
+      "odds_ratio": 1.061,
+      "direction": "positive"
+    },
+    {
+      "feature": "balance",
+      "raw_feature_name": "num__balance",
+      "coefficient": 0.056446,
+      "odds_ratio": 1.0581,
+      "direction": "positive"
+    },
+    {
+      "feature": "marital_divorced",
+      "raw_feature_name": "cat__marital_divorced",
+      "coefficient": -0.047808,
+      "odds_ratio": 0.9533,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_technician",
+      "raw_feature_name": "cat__job_technician",
+      "coefficient": -0.039516,
+      "odds_ratio": 0.9613,
+      "direction": "negative"
+    },
+    {
+      "feature": "education_unknown",
+      "raw_feature_name": "cat__education_unknown",
+      "coefficient": -0.020599,
+      "odds_ratio": 0.9796,
+      "direction": "negative"
+    },
+    {
+      "feature": "job_management",
+      "raw_feature_name": "cat__job_management",
+      "coefficient": -0.019382,
+      "odds_ratio": 0.9808,
+      "direction": "negative"
+    },
+    {
+      "feature": "pdays",
+      "raw_feature_name": "num__pdays",
+      "coefficient": 0.016424,
+      "odds_ratio": 1.0166,
+      "direction": "positive"
+    },
+    {
+      "feature": "age",
+      "raw_feature_name": "num__age",
+      "coefficient": -0.014566,
+      "odds_ratio": 0.9855,
+      "direction": "negative"
+    },
+    {
+      "feature": "month_apr",
+      "raw_feature_name": "cat__month_apr",
+      "coefficient": -0.007453,
+      "odds_ratio": 0.9926,
+      "direction": "negative"
+    }
+  ],
+  "dataset_rows": 45211,
+  "training_rows": 36168,
+  "test_rows": 9043,
+  "roc_points": [
+    {
+      "fpr": 0.0,
+      "tpr": 0.0
+    },
+    {
+      "fpr": 0.0055,
+      "tpr": 0.0756
+    },
+    {
+      "fpr": 0.0108,
+      "tpr": 0.156
+    },
+    {
+      "fpr": 0.0153,
+      "tpr": 0.2287
+    },
+    {
+      "fpr": 0.0198,
+      "tpr": 0.2836
+    },
+    {
+      "fpr": 0.0248,
+      "tpr": 0.3355
+    },
+    {
+      "fpr": 0.0311,
+      "tpr": 0.4036
+    },
+    {
+      "fpr": 0.0368,
+      "tpr": 0.4537
+    },
+    {
+      "fpr": 0.0431,
+      "tpr": 0.4972
+    },
+    {
+      "fpr": 0.0505,
+      "tpr": 0.534
+    },
+    {
+      "fpr": 0.0581,
+      "tpr": 0.5756
+    },
+    {
+      "fpr": 0.0678,
+      "tpr": 0.6172
+    },
+    {
+      "fpr": 0.0761,
+      "tpr": 0.6465
+    },
+    {
+      "fpr": 0.0857,
+      "tpr": 0.6749
+    },
+    {
+      "fpr": 0.0982,
+      "tpr": 0.7108
+    },
+    {
+      "fpr": 0.1118,
+      "tpr": 0.7457
+    },
+    {
+      "fpr": 0.1274,
+      "tpr": 0.7779
+    },
+    {
+      "fpr": 0.1474,
+      "tpr": 0.81
+    },
+    {
+      "fpr": 0.1697,
+      "tpr": 0.8412
+    },
+    {
+      "fpr": 0.1909,
+      "tpr": 0.8686
+    },
+    {
+      "fpr": 0.2317,
+      "tpr": 0.896
+    },
+    {
+      "fpr": 0.2788,
+      "tpr": 0.9216
+    },
+    {
+      "fpr": 0.355,
+      "tpr": 0.9499
+    },
+    {
+      "fpr": 0.4781,
+      "tpr": 0.9754
+    },
+    {
+      "fpr": 1.0,
+      "tpr": 1.0
+    }
+  ]
+}

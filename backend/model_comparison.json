@@ -1,0 +1,166 @@
+{
+  "models": [
+    {
+      "id": "standard_lr_16",
+      "name": "Calibrated Weighted Logistic Regression (16-Feature Pipeline - Production)",
+      "features_count": 16,
+      "accuracy": 89.2,
+      "accuracy_raw": 0.8919606325334513,
+      "precision": 53.17,
+      "precision_raw": 0.5317149569303053,
+      "recall": 64.18,
+      "recall_raw": 0.6417769376181475,
+      "f1_score": 58.16,
+      "f1_raw": 0.5815845824411134,
+      "roc_auc": 90.75,
+      "roc_auc_raw": 0.9075041458879066,
+      "confusion_matrix": [
+        [
+          7387,
+          598
+        ],
+        [
+          379,
+          679
+        ]
+      ],
+      "has_duration": true,
+      "isSelected": true
+    },
+    {
+      "id": "baseline_lr_16",
+      "name": "Baseline Unweighted Logistic Regression (16 Features)",
+      "features_count": 16,
+      "accuracy": 90.12,
+      "accuracy_raw": 0.901249585314608,
+      "precision": 64.45,
+      "precision_raw": 0.6444833625218914,
+      "recall": 34.78,
+      "recall_raw": 0.34782608695652173,
+      "f1_score": 45.18,
+      "f1_raw": 0.4518109269490485,
+      "roc_auc": 90.56,
+      "roc_auc_raw": 0.9055740146044154,
+      "confusion_matrix": [
+        [
+          7782,
+          203
+        ],
+        [
+          690,
+          368
+        ]
+      ],
+      "has_duration": true,
+      "isSelected": false
+    },
+    {
+      "id": "random_forest_16",
+      "name": "Random Forest Classifier (16 Features, max_depth=10)",
+      "features_count": 16,
+      "accuracy": 90.26,
+      "accuracy_raw": 0.9025765785690589,
+      "precision": 58.08,
+      "precision_raw": 0.5808219178082191,
+      "recall": 60.11,
+      "recall_raw": 0.6011342155009451,
+      "f1_score": 59.08,
+      "f1_raw": 0.5908035299581978,
+      "roc_auc": 92.28,
+      "roc_auc_raw": 0.9227766381435892,
+      "confusion_matrix": [
+        [
+          7526,
+          459
+        ],
+        [
+          422,
+          636
+        ]
+      ],
+      "has_duration": true,
+      "isSelected": false
+    },
+    {
+      "id": "gradient_boosting_16",
+      "name": "Gradient Boosting Classifier (16 Features, max_depth=5)",
+      "features_count": 16,
+      "accuracy": 91.0,
+      "accuracy_raw": 0.9099856242397435,
+      "precision": 66.94,
+      "precision_raw": 0.6694444444444444,
+      "recall": 45.56,
+      "recall_raw": 0.4555765595463138,
+      "f1_score": 54.22,
+      "f1_raw": 0.5421822272215973,
+      "roc_auc": 93.15,
+      "roc_auc_raw": 0.9315046051611422,
+      "confusion_matrix": [
+        [
+          7747,
+          238
+        ],
+        [
+          576,
+          482
+        ]
+      ],
+      "has_duration": true,
+      "isSelected": false
+    },
+    {
+      "id": "no_duration_lr_16",
+      "name": "Pre-Call Targeting Model (Without Duration - 15 Features)",
+      "features_count": 15,
+      "accuracy": 88.62,
+      "accuracy_raw": 0.8862103284308305,
+      "precision": 51.84,
+      "precision_raw": 0.5183776932826363,
+      "recall": 38.66,
+      "recall_raw": 0.38657844990548207,
+      "f1_score": 44.29,
+      "f1_raw": 0.4428803465078506,
+      "roc_auc": 77.22,
+      "roc_auc_raw": 0.7721908872140937,
+      "confusion_matrix": [
+        [
+          7605,
+          380
+        ],
+        [
+          649,
+          409
+        ]
+      ],
+      "has_duration": false,
+      "isSelected": false
+    },
+    {
+      "id": "legacy_4feat_lr",
+      "name": "Legacy 4-Feature Logistic Regression (Age, Balance, Duration, Campaign)",
+      "features_count": 4,
+      "accuracy": 87.08,
+      "accuracy_raw": 0.8708393232334403,
+      "precision": 44.15,
+      "precision_raw": 0.44148936170212766,
+      "recall": 39.22,
+      "recall_raw": 0.39224952741020797,
+      "f1_score": 41.54,
+      "f1_raw": 0.41541541541541543,
+      "roc_auc": 81.66,
+      "roc_auc_raw": 0.8166370545907793,
+      "confusion_matrix": [
+        [
+          7460,
+          525
+        ],
+        [
+          643,
+          415
+        ]
+      ],
+      "has_duration": true,
+      "isSelected": false
+    }
+  ]
+}
