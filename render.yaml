@@ -21,4 +21,4 @@ services:
         fromService:
           type: web
           name: depositiq-backend
-          property: url
+          property: host
