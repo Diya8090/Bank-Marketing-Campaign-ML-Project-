@@ -27,7 +27,7 @@ import {
   TrendingUp,
   Bookmark
 } from 'lucide-react';
-import { predictCustomer } from '../services/api';
+import { predictCustomer, API_BASE_URL } from '../services/api';
 import { 
   BENCHMARKS, 
   PRESET_PROFILES, 
@@ -90,7 +90,7 @@ export default function PredictionCard({ onSavePrediction }) {
       setPrediction(apiResult);
     } catch (err) {
       console.error("Prediction Error:", err);
-      setErrorMsg("Unable to connect to prediction server (http://localhost:8000). Please make sure the FastAPI backend is running.");
+      setErrorMsg(`Unable to connect to prediction server (${API_BASE_URL}). Please make sure the FastAPI backend is online.`);
     } finally {
       setLoading(false);
     }
@@ -109,7 +109,7 @@ export default function PredictionCard({ onSavePrediction }) {
         }
       } catch (err) {
         if (isMounted) {
-          setErrorMsg("Unable to connect to prediction server (http://localhost:8000). Please make sure the FastAPI backend is running.");
+          setErrorMsg(`Unable to connect to prediction server (${API_BASE_URL}). Please make sure the FastAPI backend is online.`);
         }
       } finally {
         if (isMounted) setLoading(false);

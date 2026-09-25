@@ -20,7 +20,7 @@ import ModelsAndEvaluation from './pages/ModelsAndEvaluation';
 import HistoryView from './components/HistoryView';
 import AboutProject from './pages/AboutProject';
 
-import { healthCheck } from './services/api';
+import { healthCheck, API_BASE_URL } from './services/api';
 import './App.css';
 
 const LOCAL_STORAGE_KEY = 'bankMarketingPredictionHistory';
@@ -102,7 +102,7 @@ function App() {
             <span>
               {backendStatus.online 
                 ? 'Backend: Online • Model: Loaded • API: Healthy' 
-                : 'Backend Offline (http://localhost:8000)'}
+                : `Backend Offline (${API_BASE_URL})`}
             </span>
           </div>
 

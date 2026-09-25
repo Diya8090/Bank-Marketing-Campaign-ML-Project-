@@ -1,4 +1,17 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Smart API Base URL resolver for Local Dev and Live Deployed Environments
+export const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL.replace(/\/$/, '');
+  }
+  // If running locally (localhost or 127.0.0.1)
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    return 'http://localhost:8000';
+  }
+  // Automatic fallback for live deployed production sites (Render / Vercel)
+  return 'https://bank-marketing-campaign-ml-project-1.onrender.com';
+};
+
+export const API_BASE_URL = getApiBaseUrl();
 
 /**
  * Health check endpoint for checking backend connection
